@@ -31,13 +31,13 @@
     <body>
         <head>
             <h1>My site</h1>
-            {% include nav.html %}
+            {% include nav.html navclass='nav-top' %}
         </head>
         
         {{content}}
         
         <footer>
-            {% include nav.html %}
+            {% include nav.html navclass='nav-bottom' %}
             {% include contact.html %}
             <h5>Copy right (c) - 2016</h5>
         </footer>

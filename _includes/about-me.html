@@ -1,0 +1,11 @@
+<h3>ABOUT ME</h3>
+
+{% for member in site.data.members %}
+  <li>
+    <h5>{{ member.name }}</h5>
+    <h5>{{ member.contact }}</h5>
+  </li>
+{% endfor %}
+<strong>{{ site.data.members[0].name }}</strong>
+
+<strong>{{ site.data.about-me.about-me[0].content }}</strong>

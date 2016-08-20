@@ -5,10 +5,15 @@ layout: news
 <h3>News Page</h3>
 
 <ul>
-    {% for news in site.posts limit:2 %}
-    <li>
-        <a href="">{{ news.title }}</a>
-        <p>{{ news.meta }}</p>
-    </li>
+    {% for post in site.posts %}
+        {% if post.category == 'news' %}
+            <li>
+                <a href="{{site.url}}{{ news.url }}">{{ post.title }}</a>
+                <span>{{ post.date | date: '%B %d, %Y' }}</span>
+                <p>{{ post.meta }}</p>
+                <h5>Source: {{ post.source }}</h5>
+                <h5>Tags: {{ post.tags }}</h5>
+            </li>
+        {% endif %}
     {% endfor %}
 </ul>

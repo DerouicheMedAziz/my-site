@@ -1,0 +1,8 @@
+<h3>EDUCATIONS</h3>
+
+{% for files in site.data.educations %}
+    {% for edu in files %}
+        <h5>{{ edu[0].title }}</h5>
+        <h5>{{ edu[0].content }}</h5>
+    {% endfor %}
+{% endfor %}

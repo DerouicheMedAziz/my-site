@@ -1,0 +1,9 @@
+---
+layout: home
+---
+
+<strong>Education</strong>
+
+{% for item in site.categories.educations %}
+    <strong>{{ item.title }}</strong>
+{% endfor %}
